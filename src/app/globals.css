@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brown: #8b6f4e;
+  --cream: #faf6f1;
+  --gold: #c9a96e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #faf6f1;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brown text-white px-8 py-3 font-montserrat font-medium tracking-widest text-sm uppercase transition-all duration-300 hover:bg-brown-dark hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply border border-brown text-brown px-8 py-3 font-montserrat font-medium tracking-widest text-sm uppercase transition-all duration-300 hover:bg-brown hover:text-white;
+  }
+
+  .btn-gold {
+    @apply bg-gold text-white px-8 py-3 font-montserrat font-medium tracking-widest text-sm uppercase transition-all duration-300 hover:bg-gold-dark hover:shadow-lg;
+  }
+
+  .section-title {
+    @apply font-cormorant text-4xl md:text-5xl font-light text-gray-900 leading-tight;
+  }
+
+  .section-subtitle {
+    @apply font-greatvibes text-2xl md:text-3xl text-gold;
+  }
+
+  .section-padding {
+    @apply py-20 px-4 md:px-8 lg:px-16;
+  }
+
+  .divider-gold {
+    @apply w-16 h-px bg-gold mx-auto my-6;
+  }
+}
+
+/* Embla Carousel */
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #faf6f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9a96e;
+  border-radius: 3px;
+}
+
+/* Lightbox overlay */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

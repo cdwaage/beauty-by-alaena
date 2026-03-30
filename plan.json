@@ -1,0 +1,180 @@
+{
+  "project_name": "beauty-by-alaena",
+  "pages": [
+    "home",
+    "services-pricing",
+    "gallery",
+    "inquiry",
+    "about",
+    "policies"
+  ],
+  "components": [
+    "PolicySection",
+    "ConfirmationScreen",
+    "Navbar",
+    "GalleryFilter",
+    "InquiryForm",
+    "GalleryLightbox",
+    "Footer",
+    "PricingTable",
+    "InstagramCTA \u2014 a 'See More on Instagram' button/link component for gallery and/or homepage",
+    "InstagramEmbed",
+    "WhyChooseMe",
+    "SectionDivider",
+    "TravelFeeInfo",
+    "HeroCarousel",
+    "QuoteCalculator",
+    "ScrollReveal",
+    "TestimonialsCarousel",
+    "GalleryGrid",
+    "ServiceTimingTable"
+  ],
+  "images_needed": [
+    {
+      "name": "hero-bridal-1",
+      "prompt": "Elegant bride with romantic updo hairstyle, soft natural bridal makeup with glowing skin and soft pink lips, wearing white lace wedding dress, warm golden hour lighting, luxury wedding setting, shallow depth of field, editorial photography style",
+      "location": "Hero carousel slide 1"
+    },
+    {
+      "name": "hero-bridal-2",
+      "prompt": "Close-up portrait of beautiful bride with perfectly styled loose waves and flawless bridal makeup, soft dewy foundation, subtle smoky eye, holding white bouquet, cream and ivory background tones, warm elegant lighting, high-end beauty photography",
+      "location": "Hero carousel slide 2"
+    },
+    {
+      "name": "hero-bridal-3",
+      "prompt": "Bridal party of four women with coordinated elegant hairstyles, bridesmaid updos and the bride with a romantic half-up style, all wearing soft natural makeup, champagne and blush dresses, garden wedding backdrop, sunlit afternoon, professional photography",
+      "location": "Hero carousel slide 3"
+    },
+    {
+      "name": "hero-prom-1",
+      "prompt": "Stunning young woman with glamorous prom hairstyle, elegant curled updo with loose tendrils, dramatic evening makeup with bold lip and defined eyes, wearing elegant formal gown, golden bokeh background, beautiful portrait lighting",
+      "location": "Hero carousel slide 4"
+    },
+    {
+      "name": "hero-prom-2",
+      "prompt": "Beautiful teenage girl with glamorous Hollywood waves hairstyle and flawless prom makeup, contoured cheeks, shimmery eyeshadow, coral lip, wearing strapless ball gown, luxurious event venue background, professional beauty photography",
+      "location": "Hero carousel slide 5"
+    },
+    {
+      "name": "hero-prom-3",
+      "prompt": "Two elegant young women in formal prom attire, matching updo hairstyles adorned with delicate pins, one with bold red lip and one with nude glam makeup, standing in front of fairy light backdrop, sophisticated beauty portrait",
+      "location": "Hero carousel slide 6"
+    },
+    {
+      "name": "hero-event-1",
+      "prompt": "Elegant woman with sophisticated updo hairstyle and glam evening makeup for a gala event, wearing floor-length gown, dramatic smoky eye with gold shimmer, perfect contouring, luxury ballroom backdrop, editorial beauty photography",
+      "location": "Hero carousel slide 7"
+    },
+    {
+      "name": "hero-event-2",
+      "prompt": "Young Latina woman celebrating quincea\u00f1era with an intricate formal updo adorned with flowers and crystals, soft pink and gold makeup look, wearing a pink ball gown, elegant event venue, professional portrait photography",
+      "location": "Hero carousel slide 8"
+    },
+    {
+      "name": "hero-event-3",
+      "prompt": "Beautiful woman with a professional photoshoot ready makeup look, flawless airbrushed skin, editorial eye makeup with warm terracotta tones, perfectly styled beachy waves, studio lighting, high fashion beauty portrait, Sacramento California",
+      "location": "Hero carousel slide 9"
+    },
+    {
+      "name": "about-portrait-1",
+      "prompt": "Professional portrait placeholder of a female makeup artist in her home studio, soft warm lighting, surrounded by makeup brushes and products, smiling confidently, Sacramento California, elegant and approachable, warm brown and cream tones",
+      "location": "About page main portrait"
+    },
+    {
+      "name": "about-portrait-2",
+      "prompt": "Makeup artist working on a bride, applying final touches to flawless bridal makeup, professional beauty tools, warm natural window light, elegant and focused, behind the scenes wedding day beauty preparation",
+      "location": "About page secondary portrait"
+    },
+    {
+      "name": "gallery-bridal-1",
+      "prompt": "Close-up of bride with perfect romantic bridal makeup, soft rosy cheeks, nude glossy lip, wispy lashes, dewy glowing skin, elegant bridal hair with veil, warm golden lighting, beauty portrait",
+      "location": "Gallery - Bridal"
+    },
+    {
+      "name": "gallery-bridal-2",
+      "prompt": "Bride with classic elegant chignon updo hairstyle, small white flowers tucked in, timeless bridal makeup with a soft smoky eye and nude lip, wearing lace wedding gown, outdoor garden setting",
+      "location": "Gallery - Bridal"
+    },
+    {
+      "name": "gallery-bridal-3",
+      "prompt": "Bridesmaid with polished half-up half-down hairstyle with romantic curls, natural glowing makeup, champagne bridesmaid dress, holding bouquet, warm afternoon light",
+      "location": "Gallery - Bridal"
+    },
+    {
+      "name": "gallery-prom-1",
+      "prompt": "Young woman with stunning prom updo with braids and curls, full glam makeup with bold burgundy lip and smoky eye, wearing emerald green formal gown, elegant portrait",
+      "location": "Gallery - Prom"
+    },
+    {
+      "name": "gallery-prom-2",
+      "prompt": "Glamorous prom hairstyle featuring voluminous curls pinned to one side, glitter eyeshadow and perfect skin makeup, wearing sparkly dress, warm photography studio lighting",
+      "location": "Gallery - Prom"
+    },
+    {
+      "name": "gallery-event-1",
+      "prompt": "Woman with sleek low bun hairstyle and sophisticated evening makeup for a black tie gala, bold red lip, dramatic eyeliner, wearing elegant black dress, luxury venue backdrop",
+      "location": "Gallery - Special Events"
+    },
+    {
+      "name": "gallery-event-2",
+      "prompt": "Young woman ready for birthday photoshoot, glowy natural makeup with bronzed skin and peachy pink tones, perfectly styled loose waves, wearing silk slip dress, studio portrait",
+      "location": "Gallery - Special Events"
+    }
+  ],
+  "key_requirements": [
+    "Travel fee info: $2/mile round trip within CA, outside CA = flights + hotel + Uber",
+    "Hero carousel with 9 images (3 bridal, 3 prom, 3 events)",
+    "About page uses 2 portrait placeholder images owner will replace",
+    "Event types in form: Wedding, Prom, Homecoming, Quincea\u00f1era, Photoshoot, Birthday/Gala, Other",
+    "Services: hair and makeup ONLY \u2014 no lashes, nails, skincare, brows",
+    "$100 non-refundable deposit does NOT apply toward total \u2014 exact wording required",
+    "Pricing displayed prominently on homepage \u2014 exact prices from spec",
+    "Quote calculator based on party composition on Services page",
+    "Responsive at 375px, 768px, 1024px",
+    "Framer Motion scroll animations throughout",
+    "SEO meta tags on every page",
+    "Payment methods: Cash, Venmo, CashApp, ApplePay, check",
+    "Inquiry form fields (all required): name, email, phone, event type, event date, event location, number of people, services wanted (hair/makeup/both), how did you hear about us, additional notes",
+    "'See More on Instagram' CTA button linking to https://instagram.com/_beautybyalaena on gallery page (and optionally homepage)",
+    "Inquiry form only \u2014 NO booking system or public calendar",
+    "Instagram embed widget using @_beautybyalaena oEmbed",
+    "Service timing table (bride 1hr hair / 1.5hr makeup etc.)",
+    "$150 assistant fee for large parties",
+    "$50/hr overtime after ready-by time",
+    "Gallery filterable by Bridal / Prom / Special Events with lightbox",
+    "Beautiful confirmation screen after inquiry form submission",
+    "Gallery page uses Instagram oEmbed iframes for embedding real posts AND reels as primary gallery content",
+    "Embed individual featured Instagram posts/reels via oEmbed iframe on gallery page",
+    "Trials held at home studio; travel fee applies for events outside 30-mile radius",
+    "Sacramento CA area must be displayed as service area on homepage and/or about page",
+    "Day-of additions: $50 extra per service",
+    "Full policy page with exact contract wording from spec",
+    "Flower Girl (8 & under): Hair $90 | Makeup $90",
+    "R2: Location 'Sacramento, CA area' must appear visibly on the site (hero, footer, or about)",
+    "Contact: littlems4god@gmail.com | 916.756.6446",
+    "Minimum 4 services policy for weddings must be visible",
+    "Trial: Hair $115 | Makeup $115 | Both $230",
+    "Cormorant Garamond headings, Montserrat body, Great Vibes script accents"
+  ],
+  "tech_stack": {
+    "framework": "next.js 14",
+    "styling": "tailwindcss",
+    "animations": "framer-motion",
+    "carousel": "embla-carousel-react",
+    "icons": "lucide-react",
+    "fonts": "next/font google (Cormorant Garamond, Montserrat, Great Vibes)",
+    "image_optimization": "next/image"
+  },
+  "color_palette": {
+    "primary": "#8B6F4E",
+    "secondary": "#C9A96E",
+    "accent": "#C9A96E",
+    "background": "#FAF6F1",
+    "surface": "#FFFFFF",
+    "text": "#1A1A1A",
+    "text_light": "#6B5B4E",
+    "dark": "#2C2018",
+    "cream": "#FAF6F1",
+    "warm_white": "#FFFDF9"
+  }
+}
