@@ -198,10 +198,10 @@ export default function PoliciesContent() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="mailto:alaena@beautybyalaena.com"
+              href="mailto:beautybyalaena@gmail.com"
               className="font-['Montserrat'] text-sm text-[#8B6F4E] hover:text-[#C9A96E] transition-colors"
             >
-              alaena@beautybyalaena.com
+              beautybyalaena@gmail.com
             </a>
             <span className="hidden sm:inline text-[#C9A96E]">·</span>
             <a

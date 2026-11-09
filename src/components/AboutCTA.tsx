@@ -45,11 +45,11 @@ export default function AboutCTA() {
           {/* Contact info */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <a
-              href="mailto:alaena@beautybyalaena.com"
+              href="mailto:beautybyalaena@gmail.com"
               className="flex items-center gap-2 font-['Montserrat'] text-sm text-white/60 hover:text-[#C9A96E] transition-colors"
             >
               <Mail className="w-4 h-4" />
-              alaena@beautybyalaena.com
+              beautybyalaena@gmail.com
             </a>
             <span className="hidden sm:block text-white/20">|</span>
             <span className="hidden sm:block text-white/20">|</span>
