@@ -7,7 +7,7 @@ submissions, and emails the inquiry with the Cloudflare Email Service `send_emai
 
 - From: `inquiries@forms.beautybyalaena.com` (Email Routing is enabled on the
   `forms.` subdomain only; the apex MX records stay on Google)
-- To: `beautybyalaena@gmail.com`, plus a best-effort copy to `littlems4god@gmail.com`
+- To: `beautybyalaena@gmail.com`
 - Reply-To: the visitor's email, so replying in Gmail answers the customer directly
 
 ## Free-plan requirement
