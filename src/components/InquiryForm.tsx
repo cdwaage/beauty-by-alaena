@@ -35,6 +35,7 @@ export default function InquiryForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [honeypot, setHoneypot] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -49,41 +50,39 @@ export default function InquiryForm() {
     setLoading(true);
     setError(null);
 
+    const fail = "Something went wrong. Please try again or email beautybyalaena@gmail.com directly.";
+
     try {
-      const response = await fetch("https://formsubmit.co/ajax/alaena@beautybyalaena.com", {
+      // Same-origin on beautybyalaena.com / www; preview (pages.dev) hosts post to the live API.
+      const endpoint =
+        typeof window !== "undefined" && window.location.hostname.endsWith("beautybyalaena.com")
+          ? "/api/inquiry"
+          : "https://beautybyalaena.com/api/inquiry";
+      const response = await fetch(endpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json",
         },
-        body: JSON.stringify({
-          _subject: `New Inquiry from ${formData.name} — ${formData.eventType}`,
-          _template: "table",
-          _replyto: formData.email,
-          _cc: "littlems4god@gmail.com",
-          _autoresponse: "Thank you for reaching out to Beauty by Alaena! Your inquiry has been received and I will get back to you within 2\u20133 business days to confirm availability and discuss the details of your special day. \u2014 Alaena",
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          "Event Type": formData.eventType,
-          "Event Date": formData.eventDate,
-          "Event Location": formData.location,
-          "Number of People": formData.numberOfPeople,
-          "Services Wanted": formData.services,
-          "How They Heard About Us": formData.heardAbout || "Not specified",
-          "Additional Notes": formData.notes || "None",
-        }),
+        body: JSON.stringify({ ...formData, company_website: honeypot }),
       });
 
-      const data = await response.json();
+      let data: { success?: boolean; error?: string } = {};
+      try {
+        data = await response.json();
+      } catch {
+        // non-JSON response (e.g. network/proxy error page)
+      }
 
-      if (data.success === "true" || data.success === true) {
+      if (response.ok && data.success === true) {
         setSubmitted(true);
       } else {
-        setError("Something went wrong. Please try again or email alaena@beautybyalaena.com directly.");
+        setError(data.error || fail);
       }
     } catch (err) {
-      setError("Something went wrong. Please try again or email alaena@beautybyalaena.com directly.");
+      setError(
+        "We couldn't reach the server. Please check your connection and try again, or email beautybyalaena@gmail.com directly."
+      );
     } finally {
       setLoading(false);
     }
@@ -214,10 +213,10 @@ export default function InquiryForm() {
                 className="flex flex-col sm:flex-row gap-4 justify-center text-sm font-montserrat text-gray-600"
               >
                 <a
-                  href="mailto:alaena@beautybyalaena.com"
+                  href="mailto:beautybyalaena@gmail.com"
                   className="flex items-center justify-center gap-2 px-5 py-2.5 border border-gray-200 rounded-full hover:border-gold hover:text-gold transition-colors"
                 >
-                  <Mail size={15} /> alaena@beautybyalaena.com
+                  <Mail size={15} /> beautybyalaena@gmail.com
                 </a>
                 <a
                   href="https://instagram.com/_beautybyalaena"
@@ -252,6 +251,19 @@ export default function InquiryForm() {
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-8">
+                {/* Honeypot: hidden from people, bots fill it in */}
+                <div aria-hidden="true" style={{ position: "absolute", left: "-10000px", width: 1, height: 1, overflow: "hidden" }}>
+                  <label htmlFor="company_website">Company website</label>
+                  <input
+                    id="company_website"
+                    type="text"
+                    name="company_website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={honeypot}
+                    onChange={(e) => setHoneypot(e.target.value)}
+                  />
+                </div>
                 {/* Row 1 — Name & Email */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -475,7 +487,7 @@ export default function InquiryForm() {
                 </div>
 
                 {error && (
-                  <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-sm text-red-700 font-montserrat">
+                  <div role="alert" className="bg-red-50 border border-red-200 rounded-lg p-4 text-sm text-red-700 font-montserrat">
                     {error}
                   </div>
                 )}

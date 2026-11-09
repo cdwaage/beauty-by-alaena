@@ -132,7 +132,7 @@ export default function RootLayout({
               description:
                 "Rocklin-based hair and makeup artist specializing in weddings, proms, quinceañeras, and special events.",
               url: "https://beautybyalaena.com",
-              email: "alaena@beautybyalaena.com",
+              email: "beautybyalaena@gmail.com",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Rocklin",

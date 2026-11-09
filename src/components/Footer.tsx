@@ -50,11 +50,11 @@ export default function Footer() {
             </h3>
             <div className="flex flex-col gap-4">
               <a
-                href="mailto:alaena@beautybyalaena.com"
+                href="mailto:beautybyalaena@gmail.com"
                 className="flex items-center gap-3 font-montserrat text-sm text-white/70 hover:text-gold transition-colors"
               >
                 <Mail size={16} className="text-gold flex-shrink-0" />
-                alaena@beautybyalaena.com
+                beautybyalaena@gmail.com
               </a>
               <div className="flex items-center gap-3 font-montserrat text-sm text-white/70">
                 <MapPin size={16} className="text-gold flex-shrink-0" />
