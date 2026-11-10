@@ -13,8 +13,8 @@ interface PartyMember {
 
 const ROLES: PartyMember[] = [
   { role: "Bride", price: { hair: 250, makeup: 250, both: 500 } },
-  { role: "Bridesmaid / Mother", price: { hair: 150, makeup: 150, both: 300 } },
-  { role: "Flower Girl (8 & under)", price: { hair: 90, makeup: 90, both: 180 } },
+  { role: "Bridesmaid / Mother", price: { hair: 175, makeup: 175, both: 350 } },
+  { role: "Flower Girl (8 & under)", price: { hair: 100, makeup: 100, both: 200 } },
   { role: "Event / Prom Individual", price: { hair: 150, makeup: 150, both: 300 } },
   { role: "Trial — Hair Only", price: { hair: 115, makeup: 0, both: 115 } },
   { role: "Trial — Makeup Only", price: { hair: 0, makeup: 115, both: 115 } },
@@ -364,17 +364,17 @@ export default function QuoteCalculator() {
                 <span className="font-semibold text-gray-800 block mb-1">
                   Bridesmaid / Mother
                 </span>
-                <span className="block">Hair: $150</span>
-                <span className="block">Makeup: $150</span>
-                <span className="block">Both: $300</span>
+                <span className="block">Hair: $175</span>
+                <span className="block">Makeup: $175</span>
+                <span className="block">Both: $350</span>
               </div>
               <div>
                 <span className="font-semibold text-gray-800 block mb-1">
                   Flower Girl
                 </span>
-                <span className="block">Hair: $90</span>
-                <span className="block">Makeup: $90</span>
-                <span className="block">Both: $180</span>
+                <span className="block">Hair: $100</span>
+                <span className="block">Makeup: $100</span>
+                <span className="block">Both: $200</span>
               </div>
               <div>
                 <span className="font-semibold text-gray-800 block mb-1">

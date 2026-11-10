@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { localPages } from "@/lib/local-pages";
 import { siteUrl } from "@/lib/site";
 
 const pages: { path: string; priority: number }[] = [
@@ -7,6 +8,7 @@ const pages: { path: string; priority: number }[] = [
   { path: "/gallery/", priority: 0.8 },
   { path: "/about/", priority: 0.7 },
   { path: "/inquiry/", priority: 0.8 },
+  ...localPages.map((page) => ({ path: page.path, priority: 0.6 })),
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

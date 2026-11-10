@@ -54,8 +54,8 @@ export default function PricingTables() {
               <tbody>
                 {[
                   { label: "Bride", hair: "$250", makeup: "$250", both: "$500" },
-                  { label: "Bridesmaid / Mother of Bride or Groom", hair: "$150", makeup: "$150", both: "$300" },
-                  { label: "Flower Girl (8 & under)", hair: "$90", makeup: "$90", both: "$180" },
+                  { label: "Bridesmaid / Mother of Bride or Groom", hair: "$175", makeup: "$175", both: "$350" },
+                  { label: "Flower Girl (8 & under)", hair: "$100", makeup: "$100", both: "$200" },
                 ].map((row, i) => (
                   <tr
                     key={row.label}
