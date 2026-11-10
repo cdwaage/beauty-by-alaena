@@ -48,9 +48,10 @@ export default function WhyChooseMe() {
           >
             <div className="relative aspect-[3/4] overflow-hidden">
               <Image
-                src="/images/gallery6.jpeg"
-                alt="Alaena performing professional makeup application"
+                src="/images/gallery6.webp"
+                alt="Bride and bridal party in matching yellow sets with soft styled hair"
                 fill
+                loading="lazy"
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />

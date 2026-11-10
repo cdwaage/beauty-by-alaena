@@ -4,7 +4,16 @@ import Testimonials from "@/components/Testimonials";
 import GalleryPreview from "@/components/GalleryPreview";
 import InquiryCTA from "@/components/InquiryCTA";
 import InstagramSection from "@/components/InstagramSection";
+import FaqSection from "@/components/FaqSection";
 import Link from "next/link";
+import { faqJsonLd, pageMetadata } from "@/lib/site";
+
+export const metadata = pageMetadata({
+  title: "Beauty by Alaena — Hair & Makeup Artist in Rocklin, Placer County",
+  description:
+    "Alaena is a hair and makeup artist based in Rocklin, Placer County. She travels to clients for weddings, proms, quinceañeras, and events, and for destination weddings.",
+  path: "/",
+});
 
 function PricingPreviewInline() {
   return (
@@ -282,11 +291,16 @@ function PricingPreviewInline() {
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <HeroCarousel />
       <PricingPreviewInline />
       <WhyChooseMe />
       <Testimonials />
       <GalleryPreview />
+      <FaqSection />
       <InstagramSection />
       <InquiryCTA />
     </>

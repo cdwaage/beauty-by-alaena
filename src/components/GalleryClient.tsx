@@ -6,20 +6,43 @@ import Image from 'next/image'
 import { Instagram, ExternalLink, X } from 'lucide-react'
 import GalleryHero from '@/components/GalleryHero'
 
-const extensions: Record<number, string> = {
-  1: 'JPG', 2: 'JPG', 3: 'jpeg', 4: 'jpeg', 5: 'jpeg', 6: 'jpeg',
-  7: 'png', 8: 'jpeg', 9: 'jpeg', 10: 'jpeg', 11: 'jpeg', 12: 'JPG',
-  13: 'jpeg', 14: 'jpeg', 15: 'jpeg', 16: 'jpeg', 17: 'jpeg', 18: 'jpeg',
-  19: 'jpeg', 20: 'jpeg', 21: 'png', 22: 'png', 23: 'png', 24: 'jpeg',
-  25: 'jpeg', 26: 'jpeg', 27: 'jpeg', 28: 'jpeg', 29: 'jpeg', 30: 'JPG',
-  31: 'png', 32: 'png', 33: 'png', 34: 'png',
+const galleryAlts: Record<number, string> = {
+  1: "Artist placing a bride's veil before the ceremony",
+  2: "Bride and wedding party posed outdoors after hair and makeup",
+  3: "Low bridal bun with pearl hair pins",
+  4: "Sleek low bun with face-framing pieces",
+  5: "Textured blonde updo with pearl pins",
+  6: "Bride and bridal party in matching yellow sets with soft styled hair",
+  7: "Bride with soft curled hair, a veil, and a white rose bouquet",
+  8: "Bride and groom under a veil",
+  9: "Long glossy waves styled for a wedding morning",
+  10: "Bride with long dark waves in a beaded gown",
+  11: "Voluminous blonde updo",
+  12: "Bride in a lace gown with a long veil and her bridal party",
+  20: "Soft glam makeup with a half-up style and face-framing curls",
+  21: "Twisted low bun with caramel highlights",
+  22: "Soft glam makeup with a loose updo and face-framing waves",
+  23: "Half-up hairstyle with long loose curls",
+  24: "Polished low bun with a side piece",
+  25: "Bride and groom on the reception dance floor",
+  26: "Artist finishing curled hair in front of a mirror",
+  27: "Mother and daughter with soft updos and natural makeup",
+  28: "Braided low updo on the mother of the bride",
+  29: "Artist curling a bride's hair on the morning of the wedding",
+  30: "Textured dark bridal updo",
+  31: "Natural glam makeup with a sleek center-parted style",
+  32: "Soft glam eye makeup during a trial",
+  33: "Soft glam makeup with blonde waves",
+  34: "Glam makeup with a soft eye and loose waves",
 }
 
-const images = Array.from({ length: 34 }, (_, i) => ({
-  id: i + 1,
-  src: `/images/gallery${i + 1}.${extensions[i + 1]}`,
-  alt: `Beauty by Alaena — look ${i + 1}`,
-})).filter(img => ![13, 14, 15, 16, 17, 18, 19].includes(img.id))
+const images = Object.entries(galleryAlts)
+  .map(([id, alt]) => ({
+    id: Number(id),
+    src: `/images/gallery${id}.webp`,
+    alt,
+  }))
+  .sort((a, b) => a.id - b.id)
 
 export default function GalleryClient() {
   const [lightbox, setLightbox] = useState<number | null>(null)
@@ -47,6 +70,8 @@ export default function GalleryClient() {
                 alt={img.alt}
                 width={600}
                 height={800}
+                loading="lazy"
+                sizes="(max-width: 768px) 50vw, 25vw"
                 className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">

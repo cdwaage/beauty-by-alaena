@@ -12,9 +12,10 @@ export default function InquiryCTA() {
   return (
     <section className="relative py-32 overflow-hidden">
       <Image
-        src="/images/gallery8.jpeg"
-        alt="Beautiful bridal makeup and hair"
+        src="/images/gallery8.webp"
+        alt="Bride and groom under a veil"
         fill
+        loading="lazy"
         className="object-cover"
         sizes="100vw"
       />

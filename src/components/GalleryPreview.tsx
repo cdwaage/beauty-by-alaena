@@ -7,40 +7,34 @@ import { useRef } from "react";
 
 const previewImages = [
   {
-    src: "/images/gallery1.JPG",
-    alt: "Bridal updo with elegant accessories",
+    src: "/images/gallery1.webp",
+    alt: "Artist placing a bride's veil before the ceremony",
     category: "Bridal",
-    span: "col-span-1 row-span-2",
   },
   {
-    src: "/images/gallery7.png",
-    alt: "Classic bridal makeup look",
+    src: "/images/gallery7.webp",
+    alt: "Bride with soft curled hair, a veil, and a white rose bouquet",
     category: "Bridal",
-    span: "col-span-1 row-span-1",
   },
   {
-    src: "/images/gallery9.jpeg",
-    alt: "Glamorous prom hair and makeup",
-    category: "Prom",
-    span: "col-span-1 row-span-1",
+    src: "/images/gallery9.webp",
+    alt: "Long glossy waves styled for a wedding morning",
+    category: "Bridal",
   },
   {
-    src: "/images/gallery25.jpeg",
-    alt: "Soft glam prom makeup",
-    category: "Prom",
-    span: "col-span-1 row-span-1",
+    src: "/images/gallery25.webp",
+    alt: "Bride and groom on the reception dance floor",
+    category: "Bridal",
   },
   {
-    src: "/images/gallery28.jpeg",
-    alt: "Special event glam look",
+    src: "/images/gallery28.webp",
+    alt: "Braided low updo on the mother of the bride",
+    category: "Bridal",
+  },
+  {
+    src: "/images/gallery33.webp",
+    alt: "Soft glam makeup with blonde waves",
     category: "Special Events",
-    span: "col-span-1 row-span-1",
-  },
-  {
-    src: "/images/gallery33.png",
-    alt: "Photoshoot ready hair and makeup",
-    category: "Special Events",
-    span: "col-span-1 row-span-1",
   },
 ];
 
@@ -81,6 +75,7 @@ export default function GalleryPreview() {
                 src={img.src}
                 alt={img.alt}
                 fill
+                loading="lazy"
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
                 sizes="(max-width: 768px) 50vw, 33vw"
               />

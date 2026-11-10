@@ -8,9 +8,10 @@ export default function AboutCTA() {
   return (
     <section className="py-24 text-white relative overflow-hidden">
       <Image
-        src="/images/gallery28.jpeg"
-        alt="Beauty by Alaena"
+        src="/images/gallery28.webp"
+        alt="Braided low updo on the mother of the bride"
         fill
+        loading="lazy"
         className="object-cover object-center"
         sizes="100vw"
       />
