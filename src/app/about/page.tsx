@@ -1,19 +1,15 @@
-import type { Metadata } from 'next';
 import AboutHero from '@/components/AboutHero';
 import AboutStory from '@/components/AboutStory';
 import AboutValues from '@/components/AboutValues';
 import AboutCTA from '@/components/AboutCTA';
+import { pageMetadata } from '@/lib/site';
 
-export const metadata: Metadata = {
-  title: 'About Alaena | Beauty by Alaena — Rocklin Hair & Makeup Artist',
+export const metadata = pageMetadata({
+  title: 'About Alaena — Rocklin Hair & Makeup Artist | Placer County',
   description:
-    'Meet Alaena, Rocklin\'s trusted hair and makeup artist specializing in weddings, prom, and special events. Learn her story, her passion, and why clients love working with her.',
-  openGraph: {
-    title: 'About Alaena | Beauty by Alaena',
-    description: 'Rocklin hair & makeup artist specializing in bridal, prom, and special events.',
-    url: 'https://beautybyalaena.com/about',
-  },
-};
+    'Meet Alaena, the Rocklin hair and makeup artist behind Beauty by Alaena. She is based in Placer County and travels to clients for weddings, proms, and special events.',
+  path: '/about/',
+});
 
 export default function AboutPage() {
   return (

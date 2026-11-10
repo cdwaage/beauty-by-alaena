@@ -1,16 +1,12 @@
-import type { Metadata } from 'next';
 import GalleryClient from '@/components/GalleryClient';
+import { pageMetadata } from '@/lib/site';
 
-export const metadata: Metadata = {
-  title: 'Gallery | Beauty by Alaena — Bridal, Prom & Event Looks',
+export const metadata = pageMetadata({
+  title: 'Gallery — Bridal, Prom & Event Looks in Rocklin, Placer County',
   description:
-    'Browse Beauty by Alaena\'s portfolio of bridal, prom, quinceañera, and special event hair and makeup looks in Rocklin and Placer County, CA.',
-  openGraph: {
-    title: 'Gallery | Beauty by Alaena',
-    description: 'Hair and makeup portfolio — bridal, prom, and special event looks by Alaena.',
-    url: 'https://beautybyalaena.com/gallery',
-  },
-};
+    'Browse bridal, prom, quinceañera, and event hair and makeup by Alaena, a Rocklin artist serving Placer County and destination weddings.',
+  path: '/gallery/',
+});
 
 export default function GalleryPage() {
   return <GalleryClient />;

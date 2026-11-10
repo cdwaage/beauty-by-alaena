@@ -9,8 +9,8 @@ export default function AboutHero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/about2.jpeg"
-          alt="Beauty by Alaena studio"
+          src="/images/about2.webp"
+          alt="Portrait of Alaena, hair and makeup artist in Rocklin"
           fill
           className="object-cover object-top"
           priority

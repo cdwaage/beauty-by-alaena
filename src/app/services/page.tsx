@@ -1,15 +1,17 @@
-import type { Metadata } from "next";
 import ServicesHero from "@/components/ServicesHero";
 import PricingTables from "@/components/PricingTables";
 import ServiceTiming from "@/components/ServiceTiming";
 import QuoteCalculator from "@/components/QuoteCalculator";
+import DestinationTravel from "@/components/DestinationTravel";
 import TravelFees from "@/components/TravelFees";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Services & Pricing — Beauty by Alaena",
+export const metadata = pageMetadata({
+  title: "Services & Pricing — Hair and Makeup in Rocklin, Placer County",
   description:
-    "Full pricing for bridal hair and makeup, prom, and special events. Quote calculator included.",
-};
+    "Bridal, prom, and event hair and makeup pricing for Beauty by Alaena in Rocklin, Placer County, including trials and destination wedding travel.",
+  path: "/services/",
+});
 
 export default function ServicesPage() {
   return (
@@ -18,6 +20,7 @@ export default function ServicesPage() {
       <PricingTables />
       <ServiceTiming />
       <QuoteCalculator />
+      <DestinationTravel />
       <TravelFees />
     </>
   );

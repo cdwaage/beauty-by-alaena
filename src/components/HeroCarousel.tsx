@@ -10,48 +10,48 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
   {
-    src: "/images/Photo1.png",
-    alt: "Beautiful bride on her wedding day — Beauty by Alaena",
+    src: "/images/Photo1.webp",
+    alt: "Bride with soft curled hair, a veil, and a white rose bouquet",
     category: "Bridal",
     headline: "Your Most Beautiful Day",
     sub: "Bridal hair & makeup tailored to you",
     objectPosition: "center top",
   },
   {
-    src: "/images/Photo2.jpeg",
-    alt: "Bride and groom — Beauty by Alaena",
+    src: "/images/Photo2.webp",
+    alt: "Bride and groom under a veil",
     category: "Bridal",
     headline: "Timeless Bridal Beauty",
     sub: "From intimate ceremonies to grand celebrations",
     objectPosition: "center center",
   },
   {
-    src: "/images/Photo3.jpeg",
-    alt: "Alaena at work — professional hair and makeup artistry",
+    src: "/images/Photo3.webp",
+    alt: "Alaena applying makeup during a bridal appointment",
     category: "Bridal",
     headline: "Radiant from Every Angle",
     sub: "Hair & makeup that photographs beautifully",
     objectPosition: "center top",
   },
   {
-    src: "/images/Photo4.jpeg",
-    alt: "Elegant updo hairstyle — Beauty by Alaena",
+    src: "/images/Photo4.webp",
+    alt: "Voluminous blonde updo",
     category: "Prom",
     headline: "Your Night to Shine",
     sub: "Prom & homecoming glam that turns heads",
     objectPosition: "center center",
   },
   {
-    src: "/images/Photo6.jpeg",
-    alt: "Beauty artistry in action — Beauty by Alaena",
+    src: "/images/Photo6.webp",
+    alt: "Bride in a lace gown with a long veil and her bridal party",
     category: "Bridal",
     headline: "Unforgettable Memories",
     sub: "Confidence starts with feeling beautiful",
     objectPosition: "center center",
   },
   {
-    src: "/images/Photo7.jpeg",
-    alt: "Hair and makeup for every occasion — Beauty by Alaena",
+    src: "/images/Photo7.webp",
+    alt: "Bride and bridal party in matching yellow sets with soft styled hair",
     category: "Special Events",
     headline: "Every Occasion, Elevated",
     sub: "",
@@ -107,7 +107,7 @@ export default function HeroCarousel() {
                 src={slide.src}
                 alt={slide.alt}
                 fill
-                priority={i === 0}
+                {...(i === 0 ? { priority: true } : { loading: "lazy" as const })}
                 className="object-cover"
                 style={{ objectPosition: slide.objectPosition }}
                 sizes="100vw"
@@ -129,17 +129,31 @@ export default function HeroCarousel() {
                 >
                   {slide.category}
                 </motion.span>
-                <motion.h1
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{
-                    opacity: selectedIndex === i ? 1 : 0,
-                    y: selectedIndex === i ? 0 : 30,
-                  }}
-                  transition={{ delay: 0.4, duration: 0.6 }}
-                  className="font-cormorant text-5xl md:text-7xl lg:text-8xl font-light text-white leading-tight mb-4"
-                >
-                  {slide.headline}
-                </motion.h1>
+                {i === 0 ? (
+                  <motion.h1
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{
+                      opacity: selectedIndex === i ? 1 : 0,
+                      y: selectedIndex === i ? 0 : 30,
+                    }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
+                    className="font-cormorant text-5xl md:text-7xl lg:text-8xl font-light text-white leading-tight mb-4"
+                  >
+                    {slide.headline}
+                  </motion.h1>
+                ) : (
+                  <motion.p
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{
+                      opacity: selectedIndex === i ? 1 : 0,
+                      y: selectedIndex === i ? 0 : 30,
+                    }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
+                    className="font-cormorant text-5xl md:text-7xl lg:text-8xl font-light text-white leading-tight mb-4"
+                  >
+                    {slide.headline}
+                  </motion.p>
+                )}
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{
