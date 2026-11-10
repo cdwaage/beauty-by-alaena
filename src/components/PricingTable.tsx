@@ -53,8 +53,8 @@ export default function PricingTable({ compact = false }: PricingTableProps) {
               </thead>
               <tbody>
                 <PricingRow label="Bride" hair="$250" makeup="$250" />
-                <PricingRow label="Bridesmaid / Mother of the Bride" hair="$150" makeup="$150" />
-                <PricingRow label="Flower Girl" hair="$90" makeup="$90" note="Ages 8 & under" />
+                <PricingRow label="Bridesmaid / Mother of the Bride" hair="$175" makeup="$175" />
+                <PricingRow label="Flower Girl" hair="$100" makeup="$100" note="Ages 8 & under" />
                 <PricingRow label="Trial Session" hair="$115" makeup="$115" />
               </tbody>
             </table>

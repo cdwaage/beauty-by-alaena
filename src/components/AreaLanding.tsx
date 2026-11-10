@@ -5,8 +5,8 @@ import type { LocalPage } from "@/lib/local-pages";
 
 const bridalRates = [
   ["Bride", "$250", "$250", "$500"],
-  ["Bridesmaid / mother of the bride or groom", "$150", "$150", "$300"],
-  ["Flower girl (8 & under)", "$90", "$90", "$180"],
+  ["Bridesmaid / mother of the bride or groom", "$175", "$175", "$350"],
+  ["Flower girl (8 & under)", "$100", "$100", "$200"],
 ] as const;
 
 const eventRates = [

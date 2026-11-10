@@ -97,10 +97,10 @@ function PricingPreviewInline() {
                       </p>
                     </td>
                     <td className="font-['Montserrat'] text-base font-semibold text-[#8B6F4E] text-center py-4">
-                      $150
+                      $175
                     </td>
                     <td className="font-['Montserrat'] text-base font-semibold text-[#8B6F4E] text-center py-4">
-                      $150
+                      $175
                     </td>
                   </tr>
                   <tr className="border-b border-[#F0EAE2]">
@@ -111,10 +111,10 @@ function PricingPreviewInline() {
                       <p className="font-['Montserrat'] text-xs text-[#9B9B9B]">8 & under</p>
                     </td>
                     <td className="font-['Montserrat'] text-base font-semibold text-[#8B6F4E] text-center py-4">
-                      $90
+                      $100
                     </td>
                     <td className="font-['Montserrat'] text-base font-semibold text-[#8B6F4E] text-center py-4">
-                      $90
+                      $100
                     </td>
                   </tr>
                   <tr>
