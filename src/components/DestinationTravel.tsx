@@ -22,6 +22,21 @@ export default function DestinationTravel() {
             are getting married when you inquire. Travel fees are quoted per
             event.
           </p>
+          <p>
+            <Link
+              href="/lake-tahoe-wedding-hair-makeup/"
+              className="text-brown hover:text-gold"
+            >
+              Lake Tahoe wedding hair and makeup
+            </Link>
+            <span className="text-gray-300"> · </span>
+            <Link
+              href="/napa-sonoma-wedding-hair-makeup/"
+              className="text-brown hover:text-gold"
+            >
+              Napa and Sonoma wedding hair and makeup
+            </Link>
+          </p>
         </div>
         <Link href="/inquiry/" className="btn-primary inline-block mt-10">
           Inquire about a date

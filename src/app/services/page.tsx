@@ -4,6 +4,7 @@ import ServiceTiming from "@/components/ServiceTiming";
 import QuoteCalculator from "@/components/QuoteCalculator";
 import DestinationTravel from "@/components/DestinationTravel";
 import TravelFees from "@/components/TravelFees";
+import AreasWeServe from "@/components/AreasWeServe";
 import { pageMetadata } from "@/lib/site";
 
 export const metadata = pageMetadata({
@@ -22,6 +23,7 @@ export default function ServicesPage() {
       <QuoteCalculator />
       <DestinationTravel />
       <TravelFees />
+      <AreasWeServe />
     </>
   );
 }

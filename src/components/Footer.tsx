@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Instagram, Mail, MapPin } from "lucide-react";
+import AreasWeServe from "@/components/AreasWeServe";
 
 export default function Footer() {
   return (
@@ -82,6 +83,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
+
+        <AreasWeServe variant="footer" />
 
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="font-montserrat text-xs text-white/40">
